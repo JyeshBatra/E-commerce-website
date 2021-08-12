@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body style="background-color:darkgray">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img src="./helper/54302312-shopping-cart-icon.png" style="width:45px;height:40px;" />
+        <a class=" navbar-brand " href="# " style="padding: 0px 30px;">Orion Cart</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html" style="padding: 0px 30px; ">Home </a>
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link " href="# " style="padding: 0px 30px; ">Dashboard<span class="sr-only ">(current)</span></a>
+                </li>
+            </ul>
+            <button type="button " class="btn btn-light " data-toggle="modal " data-target="#exampleModal ">Login</button>
+            <div class="modal fade " id="exampleModal " tabindex="-1 " role="dialog " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                <div class="modal-dialog " role="document ">
+                    <div class="modal-content ">
+                        <div class="modal-header ">
+                            <h5 class="modal-title " id="exampleModalLabel ">Login</h5>
+                            <button type="button " class="close " data-dismiss="modal " aria-label="Close ">
+                        <span aria-hidden="true ">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body ">
+                            <form>
+                                <div class="form-group ">
+                                    <label for="recipient-name " class="col-form-label ">Username:</label>
+                                    <input type="text " class="form-control " id="recipient-name ">
+                                </div>
+                                <div class="form-group ">
+                                    <label for="message-text " class="col-form-label ">Password:</label>
+                                    <input type="password " class="form-control " id="recipient-name ">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button " class="btn btn-secondary " data-dismiss="modal ">Close</button>
+                            <button type="button " class="btn btn-primary ">Login</button>
+                        </div>
+                        <a class="nav-link " href="RegPage.html">New User?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container ">
+        <h4 class="cartTag ">Cart(2 items)</h4>
+    </div>
+
+    <div class="container-fliud ">
+        <div class="items ">
+            <div class="row ">
+                <div class="lg-col-8 ">
+                    <div class="item ">
+                        <h2 id="emptyCart " class="cartemp ">Cart Empty</h2>
+                        <hr>
+                        <div class="row ">
+                            <div class="sm-col-3 ">
+                                <img src="./helper/itemImage.jpeg " alt="item " class="itemImage ">
+                            </div>
+                            <div class="sm-col-3 ">
+                                <h4 class="itemName ">Men's Mesh Sports <br> Running Shoes</h4>
+                                <p class="itemInfo ">Size: Small</p>
+                            </div>
+                            <div class="sm-col-3 ">
+                                <button class="addbtn ">+</button>
+                                <input class="quantity" min="1 " name="quantity " value="1 " type="number ">
+                                <button class="subbtn ">-</button>
+                                <p class="quantityBrac ">(Quantity)</p>
+                            </div>
+                            <div class="sm-col-3 ">
+                                <h5 class="itemPrice ">$20</h5>
+                                <p>Price</p>
+                                <button class="btn removebtn "><i class="fas fa-minus-square "></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="item ">
+                        <div class="row ">
+                            <div class="sm-col-3 ">
+                                <img src="./helper/itemImage.jpeg " alt="item " class="itemImage ">
+                            </div>
+                            <div class="sm-col-3 ">
+                                <h4 class="itemName ">Men's Mesh Sports <br> Running Shoes</h4>
+                                <p class="itemInfo ">Size: Small</p>
+
+                            </div>
+                            <div class="sm-col-3 ">
+                                <button class="addbtn ">+</button>
+                                <input class="quantity " min="0 " name="quantity " value="1 " type="number ">
+                                <button class="subbtn ">-</button>
+                                <p class="quantityBrac ">(Quantity)</p>
+                            </div>
+                            <div class="sm-col-3 ">
+                                <h5 class="itemPrice ">$20</h5>
+                                <p>Price</p>
+                                <button class="btn removebtn "><i class="fas fa-minus-square "></i></button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="lg-col-4 totalAmount ">
+                    <div>
+                        <h3>Total Amount</h3>
+                    </div>
+                    <div class="tables ">
+                        <table>
+                            <tr>
+                                <td class="priceName ">Subtotal</td>
+                                <td class="price ">$40</td>
+                            </tr>
+                            <tr>
+                                <td class="priceName ">Extra Charge</td>
+                                <td class="price ">$5</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <hr>
+                    <div class="totalAmountdiv ">
+                        <table>
+                            <tr>
+                                <td class="priceName ">Total Amount</td>
+                                <td class="price ">$45</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div class="checkoutdiv ">
+                        <Button class="checkoutbtn " href="./cart">Checkout</Button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer ">
+        <div class="inner-footer ">
+
+            <div class="footer-items ">
+                <h1>Orion Cart</h1>
+                <p>Ecommerce Website.</p>
+            </div>
+
+            <div class="footer-items ">
+                <h3>Quick Links</h3>
+                <div class="border1 "></div>
+                <ul>
+                    <a href="# ">
+                        <li>Home</li>
+                    </a>
+                    <a href="# ">
+                        <li>Search</li>
+                    </a>
+                    <a href="# ">
+                        <li>Contact</li>
+                    </a>
+                    <a href="# ">
+                        <li>About</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="footer-items ">
+                <h3>Category</h3>
+                <div class="border1 "></div>
+                <ul>
+                    <a href="# ">
+                        <li>Category1</li>
+                    </a>
+                    <a href="# ">
+                        <li>Category2</li>
+                    </a>
+                    <a href="# ">
+                        <li>Category3</li>
+                    </a>
+                    <a href="# ">
+                        <li>Category4</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="footer-items ">
+                <h3>Contact us</h3>
+                <div class="border1 "></div>
+                <ul>
+                    <li><i class="fa fa-map-marker " aria-hidden="true "></i>XYZ, abc</li>
+                    <li><i class="fa fa-phone " aria-hidden="true "></i>123456789</li>
+                    <li><i class="fa fa-envelope " aria-hidden="true "></i>xyz@gmail.com</li>
+                </ul>
+
+                <div class="social-media ">
+                    <a href="# "><i class="fab fa-instagram "></i></a>
+                    <a href="# "><i class="fab fa-facebook "></i></a>
+                    <a href="# "><i class="fab fa-google-plus-square "></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom ">
+            Copyright &copy; Orion Cart 2020.
+        </div>
+    </div>
+
+
+
+    <script src="./js/cart.js "></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+</body>
+
+</html>

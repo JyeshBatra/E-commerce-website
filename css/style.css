@@ -1,0 +1,447 @@
+body {
+    background-color: #ffffff;
+    font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+}
+
+.sec1 {
+    padding: 5px 20px;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+.sec2 {
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid #bbb;
+    padding: 5px 20px;
+}
+
+.footer {
+    width: 100%;
+    background: #00121b;
+    display: block;
+}
+
+.inner-footer {
+    width: 95%;
+    margin: auto;
+    padding: 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.footer-items {
+    width: 25%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.footer-items p {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 25px;
+    color: #fff;
+}
+
+.footer-items h1 {
+    color: #fff;
+}
+
+.border1 {
+    height: 3px;
+    width: 40px;
+    background: #ff9800;
+    color: #ff9800;
+    background-color: #ff9800;
+    border: 0px;
+}
+
+ul {
+    list-style: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+ul a {
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+ul a:hover {
+    color: #ff9800;
+}
+
+ul li {
+    margin: 10px 0;
+    height: 25px;
+}
+
+li i {
+    margin-right: 20px;
+}
+
+.social-media {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+
+.social-media a {
+    text-decoration: none;
+}
+
+.social-media i {
+    height: 25px;
+    width: 25px;
+    margin: 20px 10px;
+    padding: 4px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.social-media i:hover {
+    transform: scale(1.5);
+}
+
+.footer-bottom {
+    padding: 10px;
+    background: #00121b;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* for tablet mode view */
+
+@media screen and (max-width: 1275px) {
+    .footer-items {
+        width: 50%;
+    }
+}
+
+
+/* for mobile screen view */
+
+@media screen and (max-width: 660px) {
+    .footer-items {
+        width: 100%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: 0;
+}
+
+.cards {
+    font-size: 0;
+    white-space: nowrap;
+}
+
+.card-outter {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    margin: 0 5px;
+    &:before,
+    &:after {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        display: block;
+        width: 20px;
+        height: 100%;
+    }
+    &:before {
+        left: 0;
+        background: linear-gradient(90deg, #222222, transparent);
+    }
+    &:after {
+        right: 0;
+        background: linear-gradient(-90deg, #222222, transparent);
+    }
+}
+
+.slider {
+    transition: transform .2s ease-out;
+    &.active {
+        transition: none;
+        &.a {
+            cursor: grab;
+        }
+        .slider-indicator-bar {
+            .slider-indicator {
+                transition: none;
+            }
+        }
+    }
+}
+
+.slider-indicator-bar {
+    position: relative;
+    height: 5px;
+    width: 100px;
+    margin: 30px auto 0;
+    background: lighten(#222222, 6);
+    border-radius: 2px;
+    .slider-indicator {
+        position: absolute;
+        left: 0;
+        height: 6px;
+        background-color: lighten(#222222, 18);
+        ;
+        border-radius: 2px;
+        transition: left .2s ease-in-out;
+    }
+}
+
+.slider-arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    background: #cccccc;
+    border: 1px solid #888888;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-100%);
+    transition: opacity .2s ease-in-out;
+    box-shadow: 0 0 7px 0 rgba(#222222, .4);
+    &:hover {
+        box-shadow: 0 0 7px 0 rgba(#222222, .8);
+    }
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: verdana;
+        font-size: 18px;
+        color: #888888;
+    }
+    &.disabled {
+        opacity: 0;
+    }
+    &.left {
+        left: 5px;
+        &:before {
+            margin-left: -1px;
+            content: "\21F7";
+        }
+    }
+    &.right {
+        right: 5px;
+        &:before {
+            margin-left: 1px;
+            content: "\21F8";
+        }
+    }
+}
+
+.container {
+    position: relative;
+}
+
+.container .card:before {
+    background-color: #9bdc28;
+    clip-path: circle(150px at 80% 20%);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: clip-path 0.5s ease-in-out;
+    width: 100%;
+}
+
+.container .card:hover:before,
+.container .card:focus:before,
+.container .card:active:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.container .card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background-color: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .card:after {
+    color: rgba(255, 255, 255, 0.04);
+    font: 800 12rem 'Poppins', italic;
+    left: -20%;
+    position: absolute;
+    top: 30%;
+}
+
+.container .card .img-box {
+    height: 220px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: top 0.5s ease, transform 0.5s ease;
+    width: 100%;
+    z-index: 1;
+}
+
+.container .card:hover .img-box {
+    top: 0%;
+    transform: translateY(0%);
+}
+
+.container .card .img-box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(180deg) rotateZ(25deg);
+    width: 270px;
+}
+
+.container .card .content-box {
+    bottom: 0;
+    height: 100px;
+    position: absolute;
+    text-align: center;
+    transition: height 1s ease;
+    width: 100%;
+    z-index: 1;
+}
+
+.container .card:hover .content-box,
+.container .card:focus .content-box,
+.container .card:active .content-box {
+    height: 210px;
+}
+
+.container .card .content-box h2 {
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.container .card .content-box .size,
+.container .card .content-box .color {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    padding: 8px 20px;
+    transition: opacity 0.5s ease;
+    visibility: hidden;
+}
+
+.container .card:hover .content-box .size,
+.container .card:focus .content-box .size,
+.container .card:active .content-box .size {
+    opacity: 1;
+    transition-delay: 0.5s;
+    visibility: visible;
+}
+
+.container .card:hover .content-box .color,
+.container .card:focus .content-box .color,
+.container .card:active .content-box .color {
+    opacity: 1;
+    transition-delay: 0.6s;
+    visibility: visible;
+}
+
+.container .card .content-box .size h3,
+.container .card .content-box .color h3 {
+    color: #ffffff;
+    font: 300 14px 'Poppins', italic;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.container .card .content-box .size span {
+    background-color: #ffffff;
+    border-radius: 4px;
+    color: #111111;
+    cursor: pointer;
+    display: inline-block;
+    font: 600 14px 'Poppins', italic;
+    height: 26px;
+    line-height: 26px;
+    margin: 0 5px;
+    text-align: center;
+    transition: background-color 0.5s ease;
+    width: 26px;
+}
+
+.container .card .content-box .size span:hover,
+.container .card .content-box .size span:focus,
+.container .card .content-box .size span:active {
+    background-color: #9bdc28;
+}
+
+.container .card .content-box .color span {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    margin: 0 5px;
+    width: 20px;
+}
+
+.container .card .content-box .color span:nth-child(2) {
+    background-color: #9bdc28;
+}
+
+.container .card .content-box .color span:nth-child(3) {
+    background-color: #0ea9f4;
+}
+
+.container .card .content-box .color span:nth-child(4) {
+    background-color: #e91e63;
+}
+
+.container .card .content-box button {
+    background-color: #ffffff;
+    border-radius: 4px;
+    color: #111111;
+    display: inline-block;
+    font-weight: 600;
+    margin-top: 10px;
+    opacity: 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.container .card:hover .content-box button {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.75s;
+}

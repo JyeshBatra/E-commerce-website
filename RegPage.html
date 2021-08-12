@@ -1,0 +1,136 @@
+<!doctype>
+<html>
+
+<head>
+    <!-- All Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+
+    <!-- Bootstrap CSS and other CSS files-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--	<link rel="stylesheet" href="./css/style.css">-->
+
+    <!-- Bootstrap JS and other JS files-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <title>Registration</title>
+
+</head>
+
+<body style="background-color:darkgray">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img src="./helper/54302312-shopping-cart-icon.png" style="width:45px;height:40px;" />
+        <a class=" navbar-brand " href="index.html" style="padding: 0px 30px;">Orion Cart</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+		
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html" style="padding: 0px 30px;">Home<span class="sr-only">(current)</span></a>
+                </li>
+			</ul>
+		</div>
+
+    </nav>
+
+    <h1 style="text-align: center; padding: 20px; ">Registration Form</h1>
+    <div class="row">
+        <div class="col-6 p-5">
+            <img src="./helper/ecommerce.jpg " class="img-fluid">
+        </div>
+
+        <div class="col-5 bg-primary ">
+			<div style="text-align: center" class="row bg-dark">
+       
+					<div class="well text-white"><h3>Register 
+					<span class="glyphicon glyphicon-edit pull-right"></span></h3>
+					</div>
+				</div>
+				<form class="container">
+                <div class="form-group "><label>Full Name</label>
+                    <input type="text " class="form-control " name="name " id="name " placeholder="Enter your Name ">
+                </div>
+				
+				
+
+                <!--creating form row email and password-->
+                <!--creating form row-->
+                    <div class="form-row">
+                        <div class="form-group col-6"><label>E-mail Id</label>
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email">
+                        </div>
+                        <div class="form-group col-6"><label>Password</label>
+                        <input type="password" class="form-control" name="pass" id="pass" placeholder="Enter your password">
+                        </div>
+                    
+                        
+                    </div>
+                    
+                    <div class="form-group"><label>Office Address</label>
+                        <input type="text" class="form-control" name="offadd" id="offadd" placeholder="Enter your office address">
+                    </div>
+                    
+                    <div class="form-group"><label>Permanant Address</label>
+                        <input type="text" class="form-control" name="peradd" id="peradd" placeholder="Enter your permanant address">
+                    </div>
+                <!--creating form row for gender-->
+                <div class="form-row ">
+
+                     <div class="col-12 form-group">
+                            Gender:&nbsp;&nbsp;
+                <!--radio button-->
+                        <div class="form-check-inline">
+                        <input type="radio" name="gender" id="gender" class="form-check-input">
+                            <label class="form-check-label">Male</label>
+                        </div>
+                        <div class="form-check-inline">
+                        <input type="radio" name="gender" id="gender" class="form-check-input">
+                            <label class="form-check-label">Female</label>
+                        </div>
+                        </div>
+                </div>
+                    
+                                                      
+                <!--creating form row-->
+                    <div class="form-row">
+                        <div class="form-group col-6"><label>City</label>
+                        <input type="text" class="form-control" name="city" id="city" placeholder="Enter your city">
+                        </div>
+                <!--dropdown for state-->    
+                        <div class="col-4 form-group">
+                         <label>State</label>
+                            <select class="form-control" name="state" id="state">
+                            <option selected>Choose</option>
+                            <option value="UP">UttarPradesh</option>
+                            <option value="DL">Delhi</option>
+                            </select>
+                        </div>
+                        <div class="col-2 form-group">
+                        <label>Zip</label>
+                        <input type="text" class="form-control" name="zip" id="zip" placeholder="Enter zip code">
+                        </div>
+                    </div>
+
+
+                <button type="submit " class="btn bg-success ">Register</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="row bg-dark text-white text-center">
+            <div class="col-12">
+                CopyRight @ OrionCart2020
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+
+</html>
